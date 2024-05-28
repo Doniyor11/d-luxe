@@ -4705,12 +4705,16 @@
                 on: {}
             });
             if (document.querySelector(".choose__slider") && window.innerWidth <= 767.98) new core(".choose__slider", {
-                modules: [ Navigation, Pagination ],
+                modules: [ Navigation, Pagination, Autoplay ],
                 observer: true,
                 observeParents: true,
                 spaceBetween: 0,
                 autoHeight: false,
                 speed: 800,
+                autoplay: {
+                    delay: 3e3,
+                    disableOnInteraction: false
+                },
                 breakpoints: {
                     320: {
                         slidesPerView: 1.5
