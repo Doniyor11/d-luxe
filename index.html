@@ -153,11 +153,11 @@
 									<div class="section-head">
 										<div class="numbers">
 											<h4 class="numbers__item">
-												<div class="numbers__num">1000<span>+</span></div>
+												<div class="numbers__num"><object id="our_clients">-</object><span>+</span></div>
 												<div class="text">наших клиентов</div>
 											</h4>
 											<h4 class="numbers__item">
-												<div class="numbers__num">8<span>+</span></div>
+												<div class="numbers__num"><object id="years_on_market">-</object><span>+</span></div>
 												<div class="text">лет на рынке</div>
 											</h4>
 										</div>
@@ -349,7 +349,7 @@
 						</p>
 					</div>
 					<div class="choose__slider swiper">
-						<div class="choose__wrapper swiper-wrapper">
+						<div id="sponsors" class="choose__wrapper swiper-wrapper">
 							<div class="choose__slide swiper-slide">
 								<picture><source srcset="img/choose/1.webp" type="image/webp"><img class="img-fluid" src="img/choose/1.png" alt=""></picture>
 							</div>
@@ -418,7 +418,7 @@
 								через сайт и получите специальные скидки!
 							</p>
 						</div>
-						<form data-dev class="contacts__form" action="files/sendmail/sendmail.php" method="POST">
+						<form id="consult_request_form" data-dev class="contacts__form" action="files/sendmail/sendmail.php" method="POST">
 							<div class="contacts__row">
 								<div class="contacts__item">
 									<input data-required type="text" name="name" data-error="Введите ваше имя" placeholder="Ваше имя" class="contacts__input">
@@ -483,8 +483,8 @@
 				<ul class="footer__menu">
 					<li class="footer__menu-item"><button data-goto="#about" type="button" class="footer__menu-link hhv-orange">О компании</button></li>
 					<li class="footer__menu-item"><button data-goto="#services" type="button" class="footer__menu-link hhv-orange">Каталог</button></li>
-					<li class="footer__menu-item"><button data-goto="#services" type="button" class="footer__menu-link hhv-orange">Новинки</a></li>
-					<li class="footer__menu-item"><button data-goto="#contacts" type="button" class="footer__menu-link hhv-orange">Контакты</a></li>
+					<li class="footer__menu-item"><button data-goto="#services" type="button" class="footer__menu-link hhv-orange">Новинки</button></li>
+					<li class="footer__menu-item"><button data-goto="#contacts" type="button" class="footer__menu-link hhv-orange">Контакты</button></li>
 				</ul>
 				<div class="footer__contacts">
 					<a target="_blank" href="#" class="button _icon-arrow">Связаться с нами</a>
@@ -497,6 +497,7 @@
 		</footer>
 	</div>
 	<script src="js/app.min.js?_v=20240528132334"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>
