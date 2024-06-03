@@ -1,6 +1,6 @@
 // on document load event in js pure
-const BACKEND_URL = 'http://localhost:8000';
-const API_URL = 'http://localhost:8000/api';
+const BACKEND_URL = 'http://5.45.94.221:8000';
+const API_URL = 'http://5.45.94.221:8000/api';
 
 document.getElementById('consult_request_form').addEventListener('submit', function (event) {
     event.preventDefault();
