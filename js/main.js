@@ -36,6 +36,7 @@ document.addEventListener('formSent', function (event) {
             }
         })
         .catch(error => {
+            console.log('error', error)
             alert('Ошибка при отправке заявки! Попробуйте позже.')
         })
         .finally(() => {
