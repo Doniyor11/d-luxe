@@ -1,7 +1,7 @@
 // on document load event in js pure
-const BACKEND_URL = 'http://5.45.94.221:8000';
+const BACKEND_URL = 'https://admin.dluxe.uz';
 // const API_URL = 'http://localhost:8000/api';
-const API_URL = 'http://5.45.94.221:8000/api';
+const API_URL = 'https://admin.dluxe.uz/api';
 
 document.addEventListener('formSent', function (event) {
     const formData = new FormData(event.detail.form);
