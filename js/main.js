@@ -1,7 +1,7 @@
 // on document load event in js pure
 const BACKEND_URL = 'https://admin.dluxe.uz';
-// const API_URL = 'http://localhost:8000/api';
-const API_URL = 'https://admin.dluxe.uz/api';
+const API_URL = 'http://localhost:8000/api';
+// const API_URL = 'https://admin.dluxe.uz/api';
 
 document.addEventListener('formSent', function (event) {
     const form = event.detail.form;
@@ -27,7 +27,12 @@ document.addEventListener('formSent', function (event) {
         })
         .then(response => response.json())
         .then(data => {
-            alert('Ваша заявка принята!')
+            console.log('data.success', data.success)
+            if (data.success !== false) {
+                alert('Ваша заявка принята!')
+            } else {
+                alert('Ошибка при отправке заявки! Попробуйте позже.')
+            }
             document.getElementById('consult_request_form').reset();
         })
         .catch(error => {
