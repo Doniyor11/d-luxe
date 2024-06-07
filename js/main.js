@@ -30,16 +30,13 @@ document.addEventListener('formSent', function (event) {
             console.log('data.success', data.success)
             if (data.success !== false) {
                 alert('Ваша заявка принята!')
+                document.getElementById('consult_request_form').reset();
             } else {
                 alert('Ошибка при отправке заявки! Попробуйте позже.')
             }
-            document.getElementById('consult_request_form').reset();
         })
         .catch(error => {
-            console.log('error', error)
-        })
-        .finally(() => {
-            submitButton.removeAttribute('disabled');
+            alert('Ошибка при отправке заявки! Попробуйте позже.')
         });
 });
 
