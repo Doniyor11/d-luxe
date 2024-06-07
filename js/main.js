@@ -37,6 +37,9 @@ document.addEventListener('formSent', function (event) {
         })
         .catch(error => {
             alert('Ошибка при отправке заявки! Попробуйте позже.')
+        })
+        .finally(() => {
+            submitButton.removeAttribute('disabled');
         });
 });
 
