@@ -1000,9 +1000,9 @@
                         form
                     }
                 }));
-                showPopup(form, true);
+                /*showPopup(form, true);
                 formValidate.formClean(form);
-                formLogging(`Форму відправлено!`);
+                formLogging(`Форму відправлено!`);*/
             }
             function formLogging(message) {
                 FLS(`[Форми]: ${message}`);

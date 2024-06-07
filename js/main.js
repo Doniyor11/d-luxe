@@ -1,29 +1,21 @@
 // on document load event in js pure
 const BACKEND_URL = 'http://5.45.94.221:8000';
+// const API_URL = 'http://localhost:8000/api';
 const API_URL = 'http://5.45.94.221:8000/api';
 
-document.getElementById('consult_request_form').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.addEventListener('formSent', function (event) {
+    const formData = new FormData(event.detail.form);
 
-    const formData = new FormData(this);
+    const name = formData.get('name');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
 
-    const jsonData = {
-        phone: formData.get('phone'),
-        tg: formData.get('tg'),
-        email: formData.get('email'),
-        consult: formData.get('consult'),
-    };
+    if (!name || !phone || !message) return;
 
-    // request new order in AmoCRM
-    /*fetch(API_URL + '/consult_request',
+    fetch(API_URL + '/consult_request',
         {
             method: 'POST',
-            body: JSON.stringify({
-                phone: formData.get('phone'),
-                tg: formData.get('tg'),
-                email: formData.get('email'),
-                consult: formData.get('consult'),
-            }),
+            body: JSON.stringify({name, phone, message}),
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
@@ -36,7 +28,7 @@ document.getElementById('consult_request_form').addEventListener('submit', funct
         })
         .catch(error => {
             console.log('error', error)
-        });*/
+        });
 });
 
 document.addEventListener("DOMContentLoaded", function (event) {
