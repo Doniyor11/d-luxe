@@ -4,14 +4,18 @@ const BACKEND_URL = 'https://admin.dluxe.uz';
 const API_URL = 'https://admin.dluxe.uz/api';
 
 document.addEventListener('formSent', function (event) {
-    const formData = new FormData(event.detail.form);
+    const form = event.detail.form;
+    const formData = new FormData(form);
 
     const name = formData.get('name');
     const phone = formData.get('phone');
     const message = formData.get('message');
 
+    const submitButton = form.querySelector('button[type="submit"]');
+
     if (!name || !phone || !message) return;
 
+    submitButton.setAttribute('disabled', 'disabled');
     fetch(API_URL + '/consult_request',
         {
             method: 'POST',
@@ -28,6 +32,9 @@ document.addEventListener('formSent', function (event) {
         })
         .catch(error => {
             console.log('error', error)
+        })
+        .finally(() => {
+            submitButton.removeAttribute('disabled');
         });
 });
 
