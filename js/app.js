@@ -4728,22 +4728,30 @@
                 },
                 on: {}
             });
-            if (document.querySelector(".comfort__slider")) new core(".comfort__slider", {
-                modules: [ Autoplay, EffectFade ],
-                observer: true,
-                observeParents: true,
-                slidesPerView: 1,
-                spaceBetween: 0,
-                autoHeight: false,
-                speed: 800,
-                loop: true,
-                autoplay: {
-                    delay: 5e3,
-                    disableOnInteraction: false
-                },
-                effect: "fade",
-                on: {}
-            });
+            if (document.querySelector(".comfort__slider")) {
+                const comfortSwiper = new core(".comfort__slider", {
+                    modules: [ Autoplay, EffectFade ],
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: false,
+                    speed: 800,
+                    loop: true,
+                    autoplay: {
+                        delay: 5e3,
+                        disableOnInteraction: false
+                    },
+                    fadeEffect: {
+                        crossFade: false,
+                    },
+                    effect: "fade"
+                });
+
+                comfortSwiper.on("slideChange", function() {
+                    comfortSwiper.update();
+                });
+            }
         }
         window.addEventListener("load", (function(e) {
             initSliders();

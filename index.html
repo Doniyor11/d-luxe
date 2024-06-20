@@ -17,36 +17,36 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="home.html" class="header__logo">
+				<a href="" class="header__logo">
 					<picture><source srcset="img/logo.webp" type="image/webp"><img class="img-fluid" src="img/logo.png" alt="Logo"></picture>
 				</a>
 				<div class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><button data-goto="#about" type="butto" class="menu__link">О компании</button></li>
+							<li class="menu__item"><button data-goto="#about" type="butto" class="menu__link" data-lang="about_company">О компании</button></li>
 							<li data-dropdown class="header__dropdown dropdown-header">
 								<button data-dropdown-btn class="menu__link dropdown-header__btn_wrap" type="button">
 									<div class="dropdown-header__btn dropdown-header__btn_desc _icon-arrow-down">
-										<span>Каталог</span>
+										<span data-lang="catalog">Каталог</span>
 									</div>
 								</button>
 								<div class="dropdown-header__list">
-									<button data-goto="#services" type="button" class="dropdown-header__item menu__link">
-										<span>Шторы</span>
+									<button data-switch="1" type="button" class="dropdown-header__item menu__link">
+										<span data-lang="curtains">Шторы</span>
 									</button>
-									<button data-goto="#services" type="button" class="dropdown-header__item menu__link">
-										<span>Москитные сетки</span>
+									<button data-switch="2" type="button" class="dropdown-header__item menu__link">
+										<span data-lang="mosquito_nets">Москитные сетки</span>
 									</button>
-									<button data-goto="#services" type="button" class="dropdown-header__item menu__link">
-										<span>Жалюзи</span>
+									<button data-switch="3" type="button" class="dropdown-header__item menu__link">
+										<span data-lang="blinds">Жалюзи</span>
 									</button>
-									<button data-goto="#services" type="button" class="dropdown-header__item menu__link">
-										<span>Римские жалюзи</span>
+									<button data-switch="4" type="button" class="dropdown-header__item menu__link">
+										<span data-lang="roman_blinds">Римские жалюзи</span>
 									</button>
 								</div>
 							</li>
-							<li class="menu__item"><button data-goto="#contacts" type="button" class="menu__link">Контакты</button></li>
+							<li class="menu__item"><button data-goto="#contacts" type="button" class="menu__link" data-lang="contacts">Контакты</button></li>
 						</ul>
 					</nav>
 				</div>
@@ -54,19 +54,19 @@
 					<div data-dropdown class="header__dropdown dropdown-header dropdown-header-lang">
 						<button data-dropdown-btn class="dropdown-header__btn_wrap" type="button">
 							<div class="dropdown-header__btn dropdown-header__btn_desc _icon-arrow-down">
-								<span>Ру</span>
+								<span data-laguage-picker="ru">Ру</span>
 							</div>
 						</button>
 						<div class="dropdown-header__list">
-							<a href="#" class="menu__link dropdown-header__item">
-								<span>EN</span>
+							<a data-lang="ru" class="lang-picker-item menu__link dropdown-header__item">
+								<span>Ру</span>
 							</a>
-							<a href="#" class="menu__link dropdown-header__item">
-								<span>KZ</span>
+							<a data-lang="uz" class="lang-picker-item menu__link dropdown-header__item">
+								<span>Uz</span>
 							</a>
 						</div>
 					</div>
-					<a target="_blank" href="tel:+998900000000" class="button _icon-arrow">+99890 000 00 00</a>
+					<a target="_blank" href="tel:+998915433333" class="button _icon-arrow">+99890 000 00 00</a>
 				</div>
 			</div>
 		</header>
@@ -74,11 +74,11 @@
 			<section data-watch class="mainscreen">
 				<div class="mainscreen__container">
 					<div class="mainscreen__content section-head">
-						<h1 class="title">Управляй светом вместе с <span>нами</span></h1>
-						<p class="text">
-							Компания D-LUXE предлагает жалюзи, рулонные шторы, другие виды солнцезащитных систем на окна. Качество, функциональность, эстетика передаваемых в руки клиента солнцезащитных систем – для нас руководство к действию. В производстве рулонных штор и жалюзи на окна используем европейские материалы и комплектующие.
+						<h1 class="title" data-lang="banner_title">Широкий выбор стильных и функциональных жалюзи <span>для вас</span></h1>
+						<p class="text" data-lang="banner_desc">
+							Мы рады предложить вам широкий ассортимент качественных жалюзи для вашего дома или офиса. Наши жалюзи изготовлены из высококачественных материалов и имеют стильный дизайн,  который подойдет к любому интерьеру.
 						</p>
-						<a href="#contacts" class="mainscreen__btn button _icon-arrow">Связаться с нами</a>
+						<a href="#contacts" class="mainscreen__btn button _icon-arrow" data-lang="contact_us">Связаться с нами</a>
 					</div>
 					<div class="mainscreen__img">
 						<picture><source srcset="img/mainscreen/1.webp" type="image/webp"><img class="img-fluid" src="img/mainscreen/1.png" alt="Управляй светом вместе с нами "></picture>
@@ -89,9 +89,9 @@
 				<div class="why__container">
 					<div class="why__info">
 						<div class="why__info-content section-head">
-							<h2 class="title title_w">Почему стоит выбрать именно нас?</h2>
-							<p class="text text_w">
-								Lorem ipsum dolor sit amet consectetur. Ut at purus proin sit non sem sed lobortis. At tellus arcu arcu pulvinar mauris massa id in. Fermentum tristique tortor urna aliquam donec iaculis neque
+							<h2 class="title title_w" data-lang="why_we">Почему стоит выбрать именно нас?</h2>
+							<p class="text text_w" data-lang="why_we_desc">
+								Наша компания предлагает высококачественные решения для всех видов жалюзи. Мы гарантируем профессиональный подход и бесплатный замер, доставку и установку. Наши клиенты ценят нас за надежность и качество услуг.
 							</p>
 						</div>
 						<div data-da=".why__container,992.98,last" class="why__logo">
@@ -104,8 +104,8 @@
 								<img class="img-fluid" src="img/why/1.svg" alt="Удобство">
 							</div>
 							<div class="item-why__content">
-								<h4 class="item-why__title">Удобство</h4>
-								<p class="text text_grey">Закажите любые виды жалюзи и получите замер, доставку
+								<h4 class="item-why__title" data-lang="comfort">Удобство</h4>
+								<p class="text text_grey" data-lang="comfort_card">Закажите любые виды жалюзи и получите замер, доставку
 									и монтаж бесплатно!</p>
 							</div>
 						</div>
@@ -114,8 +114,8 @@
 								<img class="img-fluid" src="img/why/2.svg" alt="Профессионализм">
 							</div>
 							<div class="item-why__content">
-								<h4 class="item-why__title">Профессионализм</h4>
-								<p class="text text_grey">Мы считаемся безусловными лидерами в нашей области, наша репутация говорит сама за себя.</p>
+								<h4 class="item-why__title" data-lang="professionalism">Профессионализм</h4>
+								<p class="text text_grey" data-lang="professionalism_card">Мы считаемся безусловными лидерами в нашей области, наша репутация говорит сама за себя.</p>
 							</div>
 						</div>
 						<div class="why__item item-why">
@@ -123,8 +123,8 @@
 								<img class="img-fluid" src="img/why/3.svg" alt="Качество">
 							</div>
 							<div class="item-why__content">
-								<h4 class="item-why__title">Качество</h4>
-								<p class="text text_grey">Мы гордимся тем, что 99% наших клиентов остаются довольными нашими услугами.</p>
+								<h4 class="item-why__title" data-lang="quality">Качество</h4>
+								<p class="text text_grey" data-lang="quality_card">Мы гордимся тем, что 99% наших клиентов остаются довольными нашими услугами.</p>
 							</div>
 						</div>
 						<div class="why__item item-why">
@@ -132,8 +132,8 @@
 								<img class="img-fluid" src="img/why/4.svg" alt="Надежность">
 							</div>
 							<div class="item-why__content">
-								<h4 class="item-why__title">Надежность</h4>
-								<p class="text text_grey">Мы считаемся безусловными лидерами в нашей области, наша репутация говорит сама за себя.</p>
+								<h4 class="item-why__title" data-lang="reliability">Надежность</h4>
+								<p class="text text_grey" data-lang="reliability_card">Мы считаемся безусловными лидерами в нашей области, наша репутация говорит сама за себя.</p>
 							</div>
 						</div>
 					</div>
@@ -148,21 +148,21 @@
 							<div class="comfort__container">
 								<div class="comfort__content">
 									<div class="section-head">
-										<h2 class="title">Ваш комфорт <span>— наша миссия.</span></h2>
-										<p class="text">Lorem ipsum dolor sit amet consectetur. Ut at purus proin sit non sem sed lobortis. At tellus arcu arcu pulvinar mauris massa id in. Fermentum tristique tortor urna aliquam donec iaculis neque</p>
+										<h2 class="title" data-lang="ur_comfort">Ваш комфорт <span>— наша миссия.</span></h2>
+										<p class="text" data-lang="ur_comfort_desc">Мы стремимся обеспечить максимальный комфорт и удовлетворение наших клиентов. Наши профессионалы гарантируют высокое качество обслуживания и индивидуальный подход к каждому заказу. Уже более десяти лет мы успешно работаем на рынке, создавая уют и удобство в ваших домах и офисах.</p>
 									</div>
 									<div class="section-head">
 										<div class="numbers">
 											<h4 class="numbers__item">
-												<div class="numbers__num"><object id="our_clients">-</object><span>+</span></div>
-												<div class="text">наших клиентов</div>
+												<div class="numbers__num"><p class="our_clients"></p><span>+</span></div>
+												<div class="text" data-lang="our_clients">наших клиентов</div>
 											</h4>
 											<h4 class="numbers__item">
-												<div class="numbers__num"><object id="years_on_market">-</object><span>+</span></div>
-												<div class="text">лет на рынке</div>
+												<div class="numbers__num"><p class="years_on_market"></p><span>+</span></div>
+												<div class="text" data-lang="years_on_market">лет на рынке</div>
 											</h4>
 										</div>
-										<a href="#contacts" class="button _icon-arrow">Связаться с нами</a>
+										<a href="#contacts" class="button _icon-arrow" data-lang="contact_us">Связаться с нами</a>
 									</div>
 								</div>
 							</div>
@@ -173,11 +173,11 @@
 							<div class="comfort__container">
 								<div class="comfort__content">
 									<div class="section-head">
-										<h2 class="title">Ваш комфорт <span>— наша миссия.</span></h2>
-										<p class="text">Lorem ipsum dolor sit amet consectetur. Ut at purus proin sit non sem sed lobortis. At tellus arcu arcu pulvinar mauris massa id in. Fermentum tristique tortor urna aliquam donec iaculis neque</p>
+										<h2 class="title" data-lang="ur_comfort">Ваш комфорт <span>— наша миссия.</span></h2>
+										<p class="text" data-lang="ur_comfort_desc2">Мы предоставляем комплексные решения для создания уюта и удобства в вашем доме. Наши жалюзи не только эстетичны, но и функциональны, обеспечивая идеальный контроль освещения и приватности. С нами вы можете быть уверены в высоком качестве продукции и профессиональном обслуживании. Наши специалисты помогут вам на каждом этапе - от выбора до установки. Присоединяйтесь к числу наших довольных клиентов и убедитесь сами!</p>
 									</div>
 									<div class="section-head">
-										<a href="#contacts" class="button _icon-arrow">Связаться с нами</a>
+										<a href="#contacts" class="button _icon-arrow" data-lang="contact_us">Связаться с нами</a>
 									</div>
 								</div>
 							</div>
@@ -306,19 +306,18 @@
 					</div>
 					<div class="tabs-services__info">
 						<div class="section-head">
-							<h2 class="title">Что <span>мы</span> делаем?</h2>
-							<p class="text">
-								Мы специализируемся на создании и установке стильных
-								и функциональных оконных решений. Наш ассортимент включает в себя шторы, жалюзи, римские жалюзи и москитные сетки - все, что нужно для того, чтобы ваш дом стал идеальным пространством.
+							<h2 class="title" data-lang="what_we_do">Что <span>мы</span> делаем?</h2>
+							<p class="text" data-lang="what_we_do_desc">
+								Мы специализируемся на создании и установке стильных и функциональных оконных решений. Наш ассортимент включает в себя шторы, жалюзи, римские жалюзи и москитные сетки - все, что нужно для того, чтобы ваш дом стал идеальным пространством.
 							</p>
 						</div>
 						<nav data-tabs-titles class="tabs-services__navigation">
-							<button type="button" class="tabs-services__title _icon-arrow _tab-active">Шторы</button>
-							<button type="button" class="tabs-services__title _icon-arrow">Москитные сетки</button>
-							<button type="button" class="tabs-services__title _icon-arrow">Жалюзи</button>
-							<button type="button" class="tabs-services__title _icon-arrow">Римские жалюзи</button>
+							<button type="button" data-tab="1" class="tabs-services__title _icon-arrow _tab-active" data-lang="curtains">Шторы</button>
+							<button type="button" data-tab="2" class="tabs-services__title _icon-arrow" data-lang="mosquito_nets">Москитные сетки</button>
+							<button type="button" data-tab="3" class="tabs-services__title _icon-arrow" data-lang="blinds">Жалюзи</button>
+							<button type="button" data-tab="4" class="tabs-services__title _icon-arrow" data-lang="roman_blinds">Римские жалюзи</button>
 						</nav>
-						<a href="#contacts" class="tabs-services__btn button _icon-arrow">Заказать</a>
+						<a href="#contacts" class="tabs-services__btn button _icon-arrow" data-lang="order">Заказать</a>
 					</div>
 				</div>
 			</section>
@@ -326,12 +325,12 @@
 				<div class="offer__container">
 					<div class="offer__info">
 						<div class="offer__info-content section-head">
-							<h2 class="title"><span>Предложение дилерам компании </span></h2>
-							<p class="text">
-								Lorem ipsum dolor sit amet consectetur. Ut at purus proin sit non sem sed lobortis. At tellus arcu arcu pulvinar mauris massa id in. Fermentum tristique tortor urna aliquam donec iaculis neque
+							<h2 class="title"><span data-lang="offers_to_dillers">Предложение дилерам компании </span></h2>
+							<p class="text" data-lang="offers_to_dillers_desc">
+								Мы предлагаем уникальные условия сотрудничества для наших партнеров. Наши дилеры получают не только качественные изделия, но и полную поддержку на всех этапах работы. Присоединяйтесь к нашей команде и воспользуйтесь всеми преимуществами, которые мы предоставляем. Ваш успех — наша общая цель.
 							</p>
 						</div>
-						<a href="tel:+998900000000" class="button _icon-arrow">+99890 000 00 00</a>
+						<a href="tel:+998915433333" class="button _icon-arrow">+99890 000 00 00</a>
 					</div>
 					<div class="offer__images">
 						<div class="offer__image-ibg"><picture><source data-srcset="img/offer/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="img-fluid" data-src="img/offer/1.png" alt=""></picture></div>
@@ -344,9 +343,9 @@
 			<section class="choose">
 				<div class="choose__container">
 					<div class="choose__head">
-						<h2 class="title"><span>Они выбрали нас</span></h2>
-						<p class="text">
-							Lorem ipsum dolor sit amet consectetur. Ut at purus proin sit non sem sed lobortis. At tellus arcu arcu pulvinar mauris massa id in. Fermentum tristique tortor urna aliquam donec iaculis neque
+						<h2 class="title"><span data-lang="they_chose_us">Они выбрали нас</span></h2>
+						<p class="text" data-lang="they_chose_us_desc">
+							Наши клиенты включают ведущие компании и организации, доверяющие нам создание уютных и функциональных интерьеров. Мы гордимся тем, что они выбрали нас для своих проектов. Наши решения помогают им поддерживать комфорт и стиль на высшем уровне.
 						</p>
 					</div>
 					<div class="choose__slider swiper">
@@ -382,15 +381,15 @@
 			<section class="scheme">
 				<div class="scheme__container">
 					<div class="scheme__content">
-						<h2 class="title"><span>Схема проезда к шоуруму</span></h2>
+						<h2 class="title"><span data-lang="showroom_route">Схема проезда к шоуруму</span></h2>
 						<div class="scheme__items">
 							<div class="scheme__item item-contact">
 								<div class="item-contact__icon">
 									<img src="img/icons/location.svg" alt="Адрес">
 								</div>
 								<div class="item-contact__content">
-									<p class="text">Адрес:</p>
-									<p class="text">Улица Гагарина 56А, г.Самарканд</p>
+									<p class="text" data-lang="address">Адрес:</p>
+									<p class="text" data-lang="address_value">Улица Гагарина 56А, г.Самарканд</p>
 								</div>
 							</div>
 							<div class="scheme__item item-contact">
@@ -398,12 +397,12 @@
 									<img src="img/icons/clock.svg" alt="Режим работы">
 								</div>
 								<div class="item-contact__content">
-									<p class="text">Режим работы:</p>
-									<p class="text">Ежедневно с 9:00 до 20:00</p>
+									<p class="text" data-lang="time_work">Режим работы:</p>
+									<p class="text" data-lang="time_work_value">Ежедневно с 9:00 до 20:00</p>
 								</div>
 							</div>
 						</div>
-						<a href="#contacts" class="scheme__btn button _icon-arrow">Связаться с нами</a>
+						<a href="#contacts" class="scheme__btn button _icon-arrow" data-lang="contact_us">Связаться с нами</a>
 					</div>
 					<div class="scheme__map">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.3108370543746!2d66.93412137597403!3d39.665221871570374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4d1910f95da79b%3A0x1b84c253dc9b259a!2z0YPQu9C40YbQsCDQk9Cw0LPQsNGA0LjQvdCwIDU2LCDQodCw0LzQsNGA0LrQsNC90LQsINCh0LDQvNCw0YDQutCw0L3QtNGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2sua!4v1716308155132!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -414,24 +413,24 @@
 				<div class="contacts__container">
 					<div class="contacts__form-wrap">
 						<div class="section-head">
-							<h2 class="title"><span>Контакты</span></h2>
-							<p class="text">Хотите получить скидку? Это очень просто: оставьте заявку
+							<h2 class="title"><span data-lang="contacts">Контакты</span></h2>
+							<p class="text" data-lang="contacts_desc">Хотите получить скидку? Это очень просто: оставьте заявку
 								через сайт и получите специальные скидки!
 							</p>
 						</div>
 						<form id="consult_request_form" data-dev class="contacts__form" action="files/sendmail/sendmail.php" method="POST">
 							<div class="contacts__row">
 								<div class="contacts__item">
-									<input data-required type="text" name="name" data-error="Введите ваше имя" placeholder="Ваше имя" class="contacts__input">
+									<input data-lang-input="form_name" data-required type="text" name="name" data-error="Введите ваше имя" placeholder="Ваше имя" class="contacts__input">
 								</div>
 								<div class="contacts__item">
-									<input data-required="phone" type="text" name="phone" data-error="Введите ваш номер телефона" placeholder="Номер телефона" class="contacts__input">
+									<input data-lang-input="form_phone" data-required="phone" type="text" name="phone" data-error="Введите ваш номер телефона" placeholder="Номер телефона" class="contacts__input">
 								</div>
 							</div>
 							<div class="contacts__item contacts__item_textarea">
-								<textarea data-required name="message" class="contacts__input contacts__input_textarea" data-error="Введите сообщение" placeholder="Сообщение"></textarea>
+								<textarea data-lang-input="form_ref_point" data-required name="message" class="contacts__input contacts__input_textarea" data-error="Ориентир" placeholder="Ориентир"></textarea>
 							</div>
-							<button class="button" type="submit">Отправить</button>
+							<button class="button" type="submit" data-lang="form_send">Отправить</button>
 						</form>
 					</div>
 					<div class="scheme__items">
@@ -440,8 +439,8 @@
 								<img src="img/icons/tel.svg" alt="Телефон:">
 							</div>
 							<div class="item-contact__content">
-								<p class="text">Телефон::</p>
-								<a href="tel:+998900000000" class="text hhv-orange">+99890 000 00 00</a>
+								<p class="text" data-lang="phone">Телефон::</p>
+								<a href="tel:+998915433333" class="text hhv-orange">+998 91 543 33 33</a>
 							</div>
 						</div>
 						<div class="scheme__item item-contact">
@@ -458,8 +457,8 @@
 								<img src="img/icons/clock.svg" alt="Режим работы">
 							</div>
 							<div class="item-contact__content">
-								<p class="text">Режим работы:</p>
-								<p class="text">Ежедневно с 9:00 до 20:00</p>
+								<p class="text" data-lang="time_work">Режим работы:</p>
+								<p class="text" data-lang="time_work_value">Ежедневно с 9:00 до 20:00</p>
 							</div>
 						</div>
 					</div>
@@ -469,12 +468,12 @@
 		<footer class="footer">
 			<div class="footer__container">
 				<div class="footer__info">
-					<a href="home.html" class="footer__logo">
+					<a href="" class="footer__logo">
 						<picture><source srcset="img/logo-w.webp" type="image/webp"><img src="img/logo-w.png" alt="Logo"></picture>
 					</a>
 					<ul data-da=".footer__contacts,600.98,first" class="footer__info-links">
 						<li class="footer__info-item">
-							<a href="tel:+998900000000" class="footer__info-link hhv-orange _icon-tel">+99890 000 00 00</a>
+							<a href="tel:+998915433333" class="footer__info-link hhv-orange _icon-tel">+99890 000 00 00</a>
 						</li>
 						<li class="footer__info-item">
 							<a href="textinfo.com" class="footer__info-link hhv-orange _icon-mail">textinfo.com</a>
@@ -482,13 +481,13 @@
 					</ul>
 				</div>
 				<ul class="footer__menu">
-					<li class="footer__menu-item"><button data-goto="#about" type="button" class="footer__menu-link hhv-orange">О компании</button></li>
-					<li class="footer__menu-item"><button data-goto="#services" type="button" class="footer__menu-link hhv-orange">Каталог</button></li>
-					<li class="footer__menu-item"><button data-goto="#services" type="button" class="footer__menu-link hhv-orange">Новинки</button></li>
-					<li class="footer__menu-item"><button data-goto="#contacts" type="button" class="footer__menu-link hhv-orange">Контакты</button></li>
+					<li class="footer__menu-item"><button data-goto="#about" type="button" class="footer__menu-link hhv-orange" data-lang="about_company">О компании</button></li>
+					<li class="footer__menu-item"><button data-goto="#services" type="button" class="footer__menu-link hhv-orange" data-lang="catalog">Каталог</button></li>
+					<li class="footer__menu-item"><button data-goto="#services" type="button" class="footer__menu-link hhv-orange" data-lang="news">Новинки</button></li>
+					<li class="footer__menu-item"><button data-goto="#contacts" type="button" class="footer__menu-link hhv-orange" data-lang="contacts">Контакты</button></li>
 				</ul>
 				<div class="footer__contacts">
-					<a href="#contacts" class="button _icon-arrow">Связаться с нами</a>
+					<a href="#contacts" class="button _icon-arrow" data-lang="contact_us">Связаться с нами</a>
 					<div data-da=".footer__info,600.98,last" class="footer__sociable">
 						<a target="_blank" href="#" class="footer__sociable-icon _icon-instagram"></a>
 						<a target="_blank" href="#" class="footer__sociable-icon _icon-tg"></a>
@@ -498,7 +497,7 @@
 		</footer>
 	</div>
 	<script src="js/app.js?_v=20240528132334"></script>
-	<script src="js/main.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,88 @@
+import uzLang from './uz.lang.js';
+
 // on document load event in js pure
 const BACKEND_URL = 'https://admin.dluxe.uz';
 // const API_URL = 'http://localhost:8000/api';
 const API_URL = 'https://admin.dluxe.uz/api';
+
+function changeLanguage() {
+    const lang = localStorage.getItem('lang') || 'ru';
+    document.querySelector('[data-laguage-picker]').innerHTML = lang === 'uz' ? 'Uz' : 'Ру';
+    document.querySelectorAll('.lang-picker-item').forEach(item => {
+        if (item.dataset.lang === lang) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+
+    if (lang === 'uz' && uzLang) {
+        Object.entries(uzLang).forEach(([key, value]) => {
+            document.querySelectorAll(`[data-lang="${key}"]`)?.forEach(element => {
+                element.innerHTML = value;
+            });
+
+            document.querySelectorAll(`[data-lang-input="${key}"]`)?.forEach(element => {
+                element.setAttribute('placeholder', value);
+                element.setAttribute('data-error', `${value} ni to'ldiring`);
+            });
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+
+    changeLanguage();
+
+    document.getElementById('sponsors').innerHTML = '';
+    fetch(API_URL + '/sponsors')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(element => {
+                document.getElementById('sponsors').innerHTML += renderSponsor(
+                    element.name,
+                    element.logo
+                )
+            });
+        });
+
+    fetch(API_URL + '/editables')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(element => {
+                document.querySelector(`.${element.key}`).innerHTML = String(element.value);
+
+                const swiperContainer = document.querySelector('.comfort__slider');
+                if (swiperContainer && swiperContainer.swiper) {
+                    swiperContainer.swiper.update();
+                }
+
+            });
+        });
+
+});
+
+document.querySelectorAll('.lang-picker-item').forEach(item => {
+    item.addEventListener('click', function (event) {
+        const lang = item.dataset.lang;
+        localStorage.setItem('lang', lang);
+        location.reload();
+    });
+});
+
+document.querySelectorAll('.menu__link[data-switch]').forEach(item => {
+    item.addEventListener('click', function (event) {
+        const switchTab = item.dataset.switch;
+        const tab = document.querySelector('.tabs-services__navigation [data-tab="' + switchTab + '"]');
+
+        tab.click();
+
+        // goto #services div scroll
+        const services = document.getElementById('services');
+        const servicesTop = services.offsetTop;
+        window.scrollTo(0, servicesTop + 100);
+    });
+});
 
 document.addEventListener('formSent', function (event) {
     const form = event.detail.form;
@@ -43,35 +124,6 @@ document.addEventListener('formSent', function (event) {
             submitButton.removeAttribute('disabled');
         });
 });
-
-document.addEventListener("DOMContentLoaded", function (event) {
-
-    document.getElementById('sponsors').innerHTML = '';
-    fetch(API_URL + '/sponsors')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(element => {
-                document.getElementById('sponsors').innerHTML += renderSponsor(
-                    element.name,
-                    element.logo
-                )
-            });
-        });
-
-    fetch(API_URL + '/editables')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(element => {
-                document.getElementById(element.key).innerText = element.value
-            });
-        });
-
-});
-
-function formatPrice(price) {
-    // 15500 => 15 500
-    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-}
 
 function renderSponsor(name, logo) {
     return `

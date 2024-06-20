@@ -7,3 +7,12 @@ button[type="submit"]:disabled {
     color: #666;
     cursor: not-allowed;
 }
+
+.menu__link {
+    cursor: pointer;
+}
+
+.lang-picker-item.active {
+    background: rgba(251, 55, 27, .1);
+    border-bottom: 2px solid #fb371b;
+}
