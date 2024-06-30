@@ -705,7 +705,7 @@
                 }
             }
             function setTabsAction(e) {
-                const el = e.target;
+                /*const el = e.target;
                 if (el.closest("[data-tabs-title]")) {
                     const tabTitle = el.closest("[data-tabs-title]");
                     const tabsBlock = tabTitle.closest("[data-tabs]");
@@ -717,7 +717,7 @@
                         setTabsStatus(tabsBlock);
                     }
                     e.preventDefault();
-                }
+                }*/
             }
         }
         function menuInit() {
@@ -4702,7 +4702,17 @@
                         spaceBetween: 40
                     }
                 },
-                on: {}
+                on: {
+                    slideChange: function(e) {
+                        // get current slide html
+                        const currentSlide = e.slides[e.activeIndex];
+                        console.log('e.activeIndex', e.activeIndex)
+                        if (!currentSlide) return;
+                        const tabTo = document.querySelector('.tabs-services__title[data-tab="' + currentSlide.dataset.slider + '"]');
+                        document.querySelectorAll('.tabs-services__title').forEach(tab => tab.classList.remove('_tab-active'));
+                        tabTo.classList.add('_tab-active');
+                    }
+                }
             });
             if (document.querySelector(".choose__slider") && window.innerWidth <= 767.98) new core(".choose__slider", {
                 modules: [ Navigation, Pagination, Autoplay ],

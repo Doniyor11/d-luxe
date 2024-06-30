@@ -30,6 +30,22 @@ function changeLanguage() {
     }
 }
 
+const serviceTabs = document.querySelectorAll('.tabs-services__title');
+const serviceSlider = document.querySelector('.tabs-services__slider');
+serviceTabs?.forEach(tab => {
+    tab.addEventListener('click', function (event) {
+        const switchTab = tab.dataset.tab;
+        const slides = Array.from(serviceSlider.swiper.slides);
+        const sliderTo = slides.findIndex(slide => slide.dataset.slider === switchTab);
+        serviceSlider.swiper.slideTo(sliderTo === 0 ? 13 : sliderTo, 500, false);
+
+        serviceTabs.forEach(tab => {
+            tab.classList.remove('_tab-active');
+        });
+        tab.classList.add('_tab-active');
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function (event) {
 
     changeLanguage();
